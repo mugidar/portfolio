@@ -19,10 +19,11 @@ const Header = () => {
 							initial={{ y: -100, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							className="h-3/4 flex items-center justify-center "
+							key={link.hash}
 						>
 							<Link
 								className="flex justify-center w-full items-center px-3 py-3 transition hover:text-gray-400"
-								key={link.hash}
+								
 								href={link.hash}
 							>
 								{link.name}

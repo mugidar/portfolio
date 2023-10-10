@@ -48,7 +48,7 @@ const Intro = () => {
 					transition={{ duration: 0.2 }}
 					className="mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5]"
 				>
-					<b>Hello, my name is Michael</b>. I'm a <u>Front-end / Full-stack</u>{' '}
+					<b>Hello, my name is Michael</b>. I&apos;m a <u>Front-end / Full-stack</u>{' '}
 					developer <b>with a year</b> and <b> more than 3 years</b> of HTML+CSS{' '}
 					experience. I enjoy web developing. Creating{' '}
 					<i>web-sites and web-apps</i> inspires me. Now focus is{' '}
