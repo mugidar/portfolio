@@ -7,7 +7,7 @@ import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 const Intro = () => {
 	return (
-		<section className="max-w-[50rem] text-center sm:mb-0">
+		<section className="max-w-[50rem] text-center mb-28 sm:mb-0">
 			<div className="flex flex-col items-center justify-center">
 				<div className="relative">
 					<motion.div
@@ -42,19 +42,19 @@ const Intro = () => {
 						😎
 					</motion.span>
 				</div>
-				<motion.p
+				<motion.h1
 					initial={{ scale: 0, opacity: 0, y: 100 }}
 					animate={{ scale: 1, opacity: 1, y: 0 }}
 					transition={{ duration: 0.2 }}
 					className="mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5]"
 				>
-					<b>Hello, my name is Michael</b>. I&apos;m a <u>Front-end / Full-stack</u>{' '}
-					developer <b>with a year</b> and <b> more than 3 years</b> of HTML+CSS{' '}
-					experience. I enjoy web developing. Creating{' '}
-					<i>web-sites and web-apps</i> inspires me. Now focus is{' '}
-					<u>React (Next.js)</u>{' '}
-				</motion.p>
-				<div className=" flex select-none flex-col font-medium sm:flex-row gap-2">
+					<b>Hello, my name is Michael</b>. I&apos;m a{' '}
+					<u>Front-end / Full-stack</u> developer <b>with a year</b> and{' '}
+					<b> more than 3 years</b> of HTML+CSS experience. I enjoy web
+					developing. Creating <i>web-sites and web-apps</i> inspires me. Now
+					focus is <u>React (Next.js)</u>{' '}
+				</motion.h1>
+				<div className="flex select-none flex-col font-medium sm:flex-row gap-2">
 					<motion.div
 						initial={{ scale: 0, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
@@ -79,28 +79,30 @@ const Intro = () => {
 					>
 						Download my CV <HiDownload />
 					</motion.a>
-					<motion.a
-						href="https://www.linkedin.com/in/mykhailo-romanyuk-84838b255"
-						target="_blank"
-						whileHover={{ scale: 1.1 }}
-						initial={{ scale: 0, opacity: 0 }}
-						animate={{ scale: 1, opacity: 1 }}
-						transition={{ type: 'spring', delay: 0.4, stiffness: 200 }}
-						className="hover:text-black transition-colors hover:bg-gray-500/30 cursor-pointer bg-gray-500/50 text-white text-xl p-4  flex items-center gap-2 rounded-full"
-					>
-						<BsLinkedin />
-					</motion.a>
-					<motion.a
-						href="https://github.com/mugidar"
-						target="_blank"
-						initial={{ scale: 0, opacity: 0 }}
-						animate={{ scale: 1, opacity: 1 }}
-						whileHover={{ scale: 1.1 }}
-						transition={{ type: 'spring', delay: 0.6, stiffness: 200 }}
-						className="hover:text-black transition-colors hover:bg-gray-500/30 cursor-pointer bg-gray-500/50 text-white text-xl p-4  flex items-center gap-2 rounded-full"
-					>
-						<BsGithub />
-					</motion.a>
+					<span className="flex justify-evenly gap-2">
+						<motion.a
+							href="https://www.linkedin.com/in/mykhailo-romanyuk-84838b255"
+							target="_blank"
+							whileHover={{ scale: 1.1 }}
+							initial={{ scale: 0, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							transition={{ type: 'spring', delay: 0.4, stiffness: 200 }}
+							className="hover:text-black transition-colors hover:bg-gray-500/30 cursor-pointer bg-gray-500/50 text-white text-xl p-4  flex items-center gap-2 rounded-full"
+						>
+							<BsLinkedin />
+						</motion.a>
+						<motion.a
+							href="https://github.com/mugidar"
+							target="_blank"
+							initial={{ scale: 0, opacity: 0 }}
+							animate={{ scale: 1, opacity: 1 }}
+							whileHover={{ scale: 1.1 }}
+							transition={{ type: 'spring', delay: 0.6, stiffness: 200 }}
+							className="hover:text-black transition-colors hover:bg-gray-500/30 cursor-pointer bg-gray-500/50 text-white text-xl p-4  flex items-center gap-2 rounded-full"
+						>
+							<BsGithub />
+						</motion.a>
+					</span>
 				</div>
 			</div>
 		</section>

@@ -23,7 +23,6 @@ const Header = () => {
 						>
 							<Link
 								className="flex justify-center w-full items-center px-3 py-3 transition hover:text-gray-400"
-								
 								href={link.hash}
 							>
 								{link.name}

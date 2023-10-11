@@ -16,8 +16,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className}  bg-gray-100 text-inherit relative pt-28`}>
-				<div className="absolute w-[30rem] h-[30rem] -z-10 bg-red-100 rounded-full blur-3xl left-[30rem] sm:w-[68.75rem]"></div>
+			<body
+				className={`${inter.className} overflow-x-hidden bg-gray-100 text-inherit relative pt-28`}
+			>
+				{/* <div className="absolute w-[30rem] h-[30rem] -z-10 bg-red-100 rounded-full blur-3xl left-[30rem] sm:w-[68.75rem]"></div>
 				<div
 					className="absolute
          w-[30rem]
@@ -33,7 +35,7 @@ export default function RootLayout({
           lg:left-[-28rem]
           xl:left-[-15rem]
           2xl:left-[-5rem]"
-				></div>
+				></div> */}
 				<Header />
 				{children}
 			</body>
