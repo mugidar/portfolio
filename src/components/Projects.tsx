@@ -6,7 +6,7 @@ import Project from './Project'
 
 const Projects = () => {
 	return (
-		<section>
+		<section id='projects'>
 			<SectionHeading>My Projects</SectionHeading>
 			<div className="flex flex-col gap-5 mb-24 px-4 sm:px-0">
 				{projectsData.map((project, i) => (

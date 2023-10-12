@@ -7,7 +7,7 @@ import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 const Intro = () => {
 	return (
-		<section className="max-w-[50rem] text-center mb-28 sm:mb-0">
+		<section id='home' className="max-w-[50rem] text-center mb-28 sm:mb-0">
 			<div className="flex flex-col items-center justify-center">
 				<div className="relative">
 					<motion.div

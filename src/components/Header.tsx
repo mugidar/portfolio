@@ -1,10 +1,14 @@
 'use client'
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { links } from '../../lib/data'
 import Link from 'next/link'
+import ActiveSectionContextProvider, { ActiveSectionContext } from '@/context/active-section-context'
+import useActiveSectionContext from '@/hooks/useActiveSectionContext'
 
 const Header = () => {
+	const {currentHash, setCurrentHash } = useActiveSectionContext()
+ 
 	return (
 		<header className="z-[999] relative">
 			<motion.div
@@ -16,16 +20,31 @@ const Header = () => {
 				<ul className="flex h-full justify-center flex-wrap w-[22rem] gap-x-5 gap-y-1 text-[0.9rem] font-medium sm:flex-nowrap ">
 					{links.map(link => (
 						<motion.li
+							onClick={() => setCurrentHash(link.hash)}
 							initial={{ y: -100, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
-							className="h-3/4 flex items-center justify-center "
+							className={`relative h-3/4 flex items-center justify-center `}
 							key={link.hash}
 						>
 							<Link
-								className="flex justify-center w-full items-center px-3 py-3 transition hover:text-gray-400"
+								className={`flex justify-center items-center px-3 py-3 transition text-gray-950/70 hover:text-gray-400 transition ${
+									currentHash === link.hash && '!text-gray-950 '
+								}`}
 								href={link.hash}
 							>
 								{link.name}
+
+								{currentHash === link.hash && (
+									<motion.span
+										transition={{
+											type: 'spring',
+											stiffness: 300,
+											damping: 30
+										}}
+										layoutId="section"
+										className="bg-black/5 rounded-full absolute inset-0 sm:inset-1"
+									></motion.span>
+								)}
 							</Link>
 						</motion.li>
 					))}
