@@ -1,11 +1,25 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import SectionHeading from './section-heading'
 import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
+import useActiveSectionContext from '@/hooks/useActiveSectionContext'
 
 const About = () => {
+	const {setCurrentHash} = useActiveSectionContext()
+	const {ref, inView} = useInView()
+
+	
+	useEffect(() => {
+		if(inView) {
+			setCurrentHash("#about")
+		}
+	}, [inView])
+	
 	return (
 		<motion.section
+		ref={ref}
 		id={"about"}
 			initial={{ opacity: 0, y: 100 }}
 			animate={{ opacity: 1, y: 0 }}

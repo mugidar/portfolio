@@ -1,13 +1,23 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
+import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import { useInView } from 'react-intersection-observer'
 const Intro = () => {
+	const { setCurrentHash } = useActiveSectionContext()
+	const { ref, inView } = useInView()
+	useEffect(() => {
+		if (inView) {
+			setCurrentHash('#home')
+		}
+	}, [inView])
+	
 	return (
-		<section id='home' className="max-w-[50rem] text-center mb-28 sm:mb-0">
+		<section ref={ref} id="home" className="max-w-[50rem] text-center mb-28 sm:mb-0">
 			<div className="flex flex-col items-center justify-center">
 				<div className="relative">
 					<motion.div
