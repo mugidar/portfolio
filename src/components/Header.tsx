@@ -3,12 +3,15 @@ import { motion } from 'framer-motion'
 import React, { useContext, useEffect, useState } from 'react'
 import { links } from '../../lib/data'
 import Link from 'next/link'
-import ActiveSectionContextProvider, { ActiveSectionContext } from '@/context/active-section-context'
+import ActiveSectionContextProvider, {
+	ActiveSectionContext
+} from '@/context/active-section-context'
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
 
 const Header = () => {
-	const {currentHash, setCurrentHash } = useActiveSectionContext()
- 
+	const { currentHash, setCurrentHash, setTimeOfLastClick } =
+		useActiveSectionContext()
+
 	return (
 		<header className="z-[999] relative">
 			<motion.div
@@ -20,7 +23,10 @@ const Header = () => {
 				<ul className="flex h-full justify-center flex-wrap w-[22rem] gap-x-5 gap-y-1 text-[0.9rem] font-medium sm:flex-nowrap ">
 					{links.map(link => (
 						<motion.li
-							onClick={() => setCurrentHash(link.hash)}
+							onClick={() => {
+								setCurrentHash(link.hash)
+								setTimeOfLastClick(Date.now)
+							}}
 							initial={{ y: -100, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							className={`relative h-3/4 flex items-center justify-center `}

@@ -5,22 +5,18 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const About = () => {
-	const {setCurrentHash} = useActiveSectionContext()
-	const {ref, inView} = useInView()
 
-	
-	useEffect(() => {
-		if(inView) {
-			setCurrentHash("#about")
-		}
-	}, [inView])
+	const {ref} = useIntersectionObserver( '#about', {
+		threshold: 0.4
+	})
 	
 	return (
 		<motion.section
-		ref={ref}
-		id={"about"}
+			ref={ref}
+			id={'about'}
 			initial={{ opacity: 0, y: 100 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.176 }}

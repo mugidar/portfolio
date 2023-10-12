@@ -5,16 +5,14 @@ import { projectsData } from '../../lib/data'
 import { useInView } from 'react-intersection-observer'
 import Project from './Project'
 import useActiveSectionContext from '@/hooks/useActiveSectionContext'
+import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const Projects = () => {
-	const { setCurrentHash } = useActiveSectionContext()
-	const { ref, inView } = useInView()
 
-	useEffect(() => {
-		if (inView) {
-			setCurrentHash('#projects')
-		}
-	}, [inView])
+	const {ref} = useIntersectionObserver( '#projects', {
+		threshold: 0.2, 
+	})
+
 	return (
 		<section ref={ref} id="projects">
 			<SectionHeading>My Projects</SectionHeading>
