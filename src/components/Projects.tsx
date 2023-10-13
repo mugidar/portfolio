@@ -9,7 +9,7 @@ import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const Projects = () => {
 
-	const {ref} = useIntersectionObserver( '#projects', .3)
+	const {ref} = useIntersectionObserver( '#projects', .5)
 
 	return (
 		<section ref={ref} id="projects">
