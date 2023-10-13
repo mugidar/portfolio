@@ -9,9 +9,7 @@ import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const Projects = () => {
 
-	const {ref} = useIntersectionObserver( '#projects', {
-		threshold: 0.2, 
-	})
+	const {ref} = useIntersectionObserver( '#projects', .3)
 
 	return (
 		<section ref={ref} id="projects">

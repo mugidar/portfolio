@@ -9,9 +9,7 @@ import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const About = () => {
 
-	const {ref} = useIntersectionObserver( '#about', {
-		threshold: 0.4
-	})
+	const {ref} = useIntersectionObserver( '#about', .5)
 	
 	return (
 		<motion.section
