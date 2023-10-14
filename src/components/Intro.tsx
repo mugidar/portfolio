@@ -10,7 +10,7 @@ import { useInView } from 'react-intersection-observer'
 import useIntersectionObserver from '@/hooks/useSectionInView'
 const Intro = () => {
 
-	const {ref} = useIntersectionObserver("#home")
+	const ref = useIntersectionObserver("#home")
 	
 
 	return (
