@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import useActiveSectionContext from './useActiveSectionContext'
 import { useInView } from 'react-intersection-observer'
-import { SectioName } from '../../lib/types'
+import { SectionName } from '../../lib/types'
 
-const useSectionInView = (hash: SectioName, threslod = .75) => {
+const useSectionInView = (hash: SectionName, threslod = .75) => {
 	const { setCurrentHash, timeOfLastClick } = useActiveSectionContext()
 	const { ref, inView } = useInView({
 		threshold: threslod
@@ -14,7 +14,7 @@ const useSectionInView = (hash: SectioName, threslod = .75) => {
 		}
 	}, [inView])
 
-	return { ref }
+	return  ref
 }
 
 export default useSectionInView

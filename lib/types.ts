@@ -1,3 +1,5 @@
-import { links } from "./data";
+import { links, skillsData } from "./data";
 
-export type SectioName = (typeof links)[number]['hash']
+export type SectionName = (typeof links)[number]['hash']
+
+export type SkillName = (typeof skillsData)[number]

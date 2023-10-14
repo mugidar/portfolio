@@ -1,12 +1,12 @@
 'use client'
 import React, { createContext, useEffect, useState } from 'react'
-import { SectioName } from '../../lib/types'
+import { SectionName } from '../../lib/types'
 
 
 
 type ActiveSectionContextType = {
-	currentHash: SectioName
-	setCurrentHash: React.Dispatch<React.SetStateAction<SectioName>>
+	currentHash: SectionName
+	setCurrentHash: React.Dispatch<React.SetStateAction<SectionName>>
     timeOfLastClick: number
     setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>
 }
@@ -20,7 +20,7 @@ const ActiveSectionContextProvider = ({
 }: {
 	children: React.ReactNode
 }) => {
-	const [currentHash, setCurrentHash] = useState<SectioName>('#home')
+	const [currentHash, setCurrentHash] = useState<SectionName>('#home')
 	const [timeOfLastClick, setTimeOfLastClick] = useState(0)
 
 	useEffect(() => {

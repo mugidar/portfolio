@@ -8,8 +8,7 @@ import useActiveSectionContext from '@/hooks/useActiveSectionContext'
 import useIntersectionObserver from '@/hooks/useSectionInView'
 
 const Projects = () => {
-
-	const {ref} = useIntersectionObserver( '#projects', .5)
+	const ref = useIntersectionObserver('#projects', 0.5)
 
 	return (
 		<section ref={ref} id="projects">
