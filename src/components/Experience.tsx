@@ -1,12 +1,15 @@
+"use client"
 import React from 'react'
 import ExperienceItem from './ExperienceItem'
 import SectionHeading from './section-heading'
 import { experiencesData } from '../../lib/data'
+import useSectionInView from '@/hooks/useSectionInView'
 
 
 const Experience = () => {
+	const ref = useSectionInView("#experience", 1)
 	return (
-		<section>
+		<section ref={ref} id='experience'>
 			<SectionHeading>Job Experirence</SectionHeading>
 			<div className="relative w-screen p-5 h-screen max-h-[50vh] md:max-h-[65vh] overflow-y-scroll no-scrollbar  md:max-w-[50rem] ">
 				
