@@ -29,7 +29,7 @@ const SkillItem = ({ skill, index }: { skill: SkillName; index: number }) => {
 			whileInView="animate"
 			custom={index}
 			variants={fadeInAnimationVariants}
-			className="hover:bg-gray-200 cursor-pointer p-2 bg-gray-100 rounded-xl shadow-md"
+			className="hover:bg-gray-200 transition-all cursor-pointer p-2 bg-gray-100 rounded-xl shadow-md"
 		>
 			{skill}
 		</motion.li>
