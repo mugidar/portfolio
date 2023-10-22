@@ -35,10 +35,9 @@ const Experience = () => {
 					/>
 					<div className="flex w-full items-center gap-5 md:gap-18 flex-col min-h-full ">
 						{experiencesData.map((item: ExperienceItem, i) => (
-							<>
+							
 								<ExperienceItem key={i} index={i} {...item} />
 							
-							</>
 						))}
 					</div>
 				</div>
