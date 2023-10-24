@@ -15,7 +15,7 @@ const Skills = () => {
 			<SectionHeading>Skills</SectionHeading>
 			<ul className="flex justify-center flex-wrap gap-5 ">
 				{skillsData.map((skill, index) => (
-					<Link href={`/technologies/${skill.replace(/\s+/g, '-').toLowerCase()}`}><SkillItem key={skill} skill={skill} index={index} /></Link>
+					<Link key={skill} href={`/technologies/${skill.replace(/\s+/g, '-').toLowerCase()}`}><SkillItem key={skill} skill={skill} index={index} /></Link>
 				))}
 			</ul>
 		</motion.section>
