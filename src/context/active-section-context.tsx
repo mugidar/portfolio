@@ -23,9 +23,9 @@ const ActiveSectionContextProvider = ({
 	const [currentHash, setCurrentHash] = useState<SectionName>("#home")
 	const [timeOfLastClick, setTimeOfLastClick] = useState(0)
 
-	useEffect(() => {
+	/* useEffect(() => {
 		window.location.hash = currentHash
-	}, [currentHash])
+	}, [currentHash]) */
 
 	return (
 		<ActiveSectionContext.Provider value={{ currentHash, setCurrentHash, timeOfLastClick, setTimeOfLastClick }}>
