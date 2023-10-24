@@ -2,6 +2,7 @@ import Header from '@/components/Header'
 import '../globals.css'
 import { Inter } from 'next/font/google'
 import ActiveSectionContextProvider from '@/context/active-section-context'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
 				<div className="absolute top-[-1rem]  w-[50rem] h-[31.25rem] left-[-35rem] -z-10 bg-blue-100 rounded-full blur-3xl  right-[30rem] sm:w-[68.75rem]  md:left-[-33rem]  lg:left-[-28rem]  xl:left-[-15rem]  2xl:left-[-5rem]"></div>
 
 				<ActiveSectionContextProvider>
+					<ThemeToggle/>
 					<Header />
 					{children}
 				</ActiveSectionContextProvider>
