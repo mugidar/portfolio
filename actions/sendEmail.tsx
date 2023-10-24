@@ -5,14 +5,35 @@ import { Resend } from 'resend'
 import ContactFormEmail from '@/components/contact-form-email'
 const resend = new Resend(process.env.RESEND_API)
 
+
+
+
+
 export const sendEmail = async (formData: FormData) => {
+	const config = {
+		message: {
+			minLength: 30,
+			maxLength: 500
+		},
+		email: {
+			minLength: 4,
+			maxLength: 50
+		}
+	}
 	const senderEmail = formData.get('email') as string
 	const senderText = formData.get('text') as string
 	let data
-	if (senderEmail.trim().length < 4)
-		return { error: 'Your email should be more than 4 characters 🥰' }
-	if (senderText.trim().length < 30)
-		return { error: 'Your message shoud be more than 30 characters 🥰' }
+	if (senderEmail.trim().length < config.email["minLength"])
+		return { error: `Your email should be more than ${config.email["minLength"]} characters 🥰` }
+	if (senderEmail.trim().length >= config.email["maxLength"])
+		return { error: `Your email should be more than ${ config.email["maxLength"]} characters 🥰` }
+
+
+
+	if (senderText.trim().length < config.message["minLength"])
+		return { error: `Your message shoud be more than ${config.message["minLength"]} characters 🥰` }
+	if (senderText.trim().length >= config.message["maxLength"])
+		return { error: `Your message shoud be less than ${config.message["maxLength"]} characters 🥰` }
 
 	try {
 		data = await resend.emails.send({
