@@ -20,7 +20,7 @@ const ActiveSectionContextProvider = ({
 }: {
 	children: React.ReactNode
 }) => {
-	const [currentHash, setCurrentHash] = useState<SectionName>('#home')
+	const [currentHash, setCurrentHash] = useState<SectionName>("#home")
 	const [timeOfLastClick, setTimeOfLastClick] = useState(0)
 
 	useEffect(() => {

@@ -20,9 +20,9 @@ const ExperienceItem: React.FC<ExperienceItem & { index: number }> = ({
 			whileInView={{
 				x: 0,
 				opacity: 1
-				/* ,transition: {
-					delay: 0.2 * index
-				} */
+				 ,transition: {
+					delay: 0.5 * index
+				} 
 			}}
 			viewport={{once: true}}
 			className=" md:absolute shadow-xl   bottom-10 right-full group-even:left-full flex flex-col bg-slate-400/60 p-4 rounded-md md:w-[20rem]">
@@ -40,7 +40,7 @@ const ExperienceItem: React.FC<ExperienceItem & { index: number }> = ({
 						y: 0,
 						opacity: 1,
 						transition: {
-							delay: 0.5 * index
+							delay: 0.4 * index
 						}
 					}}
 					viewport={{ once: true }}
@@ -57,7 +57,7 @@ const ExperienceItem: React.FC<ExperienceItem & { index: number }> = ({
 						x: 0,
 						opacity: 1,
 						transition: {
-							delay: 0.5 * index
+							delay: 0.4 * index
 						}
 					}}
 					viewport={{ once: true }}

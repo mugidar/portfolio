@@ -1,0 +1,22 @@
+article {
+    padding: 18px;
+    font-size: 1rem;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4rem;
+    font-weight: bold;
+}
+h2 {
+    margin: 0;
+}
+h3{ 
+    margin-top: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+p{
+    font-size: 1.3rem;
+}

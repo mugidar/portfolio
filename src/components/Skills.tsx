@@ -5,6 +5,7 @@ import SkillItem from './SkillItem'
 import { skillsData } from '../../lib/data'
 import useSectionInView from '@/hooks/useSectionInView'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const Skills = () => {
 	const ref = useSectionInView('#skills')
@@ -14,7 +15,7 @@ const Skills = () => {
 			<SectionHeading>Skills</SectionHeading>
 			<ul className="flex justify-center flex-wrap gap-5 ">
 				{skillsData.map((skill, index) => (
-					<SkillItem key={skill} skill={skill} index={index} />
+					<Link href={`/technologies/${skill.replace(/\s+/g, '-').toLowerCase()}`}><SkillItem key={skill} skill={skill} index={index} /></Link>
 				))}
 			</ul>
 		</motion.section>
