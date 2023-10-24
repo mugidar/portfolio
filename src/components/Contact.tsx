@@ -5,6 +5,7 @@ import SectionHeading from './section-heading'
 import { FaTelegramPlane } from 'react-icons/fa'
 import { sendEmail } from '../../actions/sendEmail'
 import { experimental_useFormStatus as useFormStatus } from 'react-dom'
+import toast from 'react-hot-toast';
 
 const Contact = () => {
 	const ref = useSectionInView('#contact')
@@ -24,8 +25,12 @@ const Contact = () => {
 			<form
 				action={async (formData: FormData) => {
 					const { data, error } = await sendEmail(formData)
-					if (error) {
-						return
+					if(data) {
+						toast.success(`I will reply to you as soon as possible. Thank you 🙏.`, {duration: 3000})
+					}
+					if (!data) {
+						setIsLoading(false)
+						toast.error(error)
 					}
 					setIsLoading(false)
 				}}
@@ -39,7 +44,7 @@ const Contact = () => {
 					className="p-2 resize-none border-2 rounded-md border-gray-300 focus:border-gray-400 outline-gray-400 transition "
 				/>
 				<textarea
-					minLength={30}
+				
 					maxLength={500}
 					name="text"
 					placeholder="Your text here..."
