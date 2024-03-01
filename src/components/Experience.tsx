@@ -22,7 +22,7 @@ const Experience = () => {
 	}
 	return (
 		<motion.section ref={ref} id="experience">
-			<SectionHeading>Job Experirence</SectionHeading>
+			<SectionHeading>Досвід</SectionHeading>
 			<div className="inline-block relative w-screen p-5 h-full  max-h-[60vh] md:max-h-[85vh] overflow-y-scroll no-scrollbar  md:max-w-[50rem] ">
 				<div className="relative flex flex-col ">
 					<motion.div

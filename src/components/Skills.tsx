@@ -12,7 +12,7 @@ const Skills = () => {
 	
 	return (
 		<motion.section id='skills' ref={ref} className="w-1/2 mb-28">
-			<SectionHeading>Skills</SectionHeading>
+			<SectionHeading>Скіли</SectionHeading>
 			<ul className="flex justify-center flex-wrap gap-5 ">
 				{skillsData.map((skill, index) => (
 					<Link key={skill} href={`/technologies/${skill.replace(/\s+/g, '-').toLowerCase()}`}><SkillItem key={skill} skill={skill} index={index} /></Link>

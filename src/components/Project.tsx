@@ -8,7 +8,8 @@ const Project = ({
 	title,
 	description,
 	tags,
-	imageUrl
+	imageUrl,
+	linkHref
 }: (typeof projectsData)[number]) => {
 	const ref = useRef<HTMLDivElement>(null)
 	const { scrollYProgress } = useScroll({
@@ -20,14 +21,16 @@ const Project = ({
 	const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1])
 
 	return (
-		<motion.article
+		<motion.a
+		target='_blank'
+		href={linkHref}
 			ref={ref}
 			style={{
 				scale: scaleProgress,
 				opacity: opacityProgress,
 				transition: '.2s'
 			}}
-			className="group  even:flex-row-reverse hover:cursor-pointer hover:bg-gray-500/10 transition relative flex h-[20rem] gap-5 items-center p-8 bg-gray-50 max-w-[42rem] border-black/5 border overflow-hidden sm:pr-8"
+			className="group even:flex-row-reverse hover:cursor-pointer hover:bg-gray-500/10 transition relative flex h-[20rem] gap-5 items-center p-8 bg-gray-50 max-w-[42rem] border-black/5 border overflow-hidden sm:pr-8"
 		>
 			<motion.div className="text-center flex h-full flex-1 flex-col justify-between ">
 				<h3 className="text-2xl font-bold">{title}</h3>
@@ -56,7 +59,7 @@ const Project = ({
 					/>
 				</div>
 			</div>
-		</motion.article>
+		</motion.a>
 	)
 }
 export default Project

@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import React, { useContext, useEffect, useState } from 'react'
-import { links } from '../../lib/data'
+import { links, uaLinks } from '../../lib/data'
 import Link from 'next/link'
 import ActiveSectionContextProvider, {
 	ActiveSectionContext
@@ -21,7 +21,7 @@ const Header = () => {
 			></motion.div>
 			<nav className="flex fixed top-[0.15rem] left-1/2 h-12  -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
 				<ul className="flex h-full justify-center flex-wrap w-[22rem] gap-x-5 gap-y-1 text-[0.9rem] font-medium sm:flex-nowrap ">
-					{links.map(link => (
+					{uaLinks.map(link => (
 						<motion.li
 							onClick={() => {
 								setCurrentHash(link.hash)

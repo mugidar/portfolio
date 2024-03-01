@@ -20,7 +20,7 @@ export default function RootLayout({
 
 				<Link href={'/'}>
 					<h1 className="text-center text-xl font-bold underline text-blue-500 bg-red-200 p-5 ">
-						GO TO THE DEVELOPER PAGE
+						На головну
 					</h1>
 				</Link>
 
