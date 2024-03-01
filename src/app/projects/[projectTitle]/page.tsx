@@ -1,10 +1,11 @@
+//@ts-ignore
 import React from "react";
 import { projectsData } from "../../../../lib/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProjectPage = ({ params }: { params: { projectTitle: string } }) => {
-  const project = projectsData.find(
+  const project: any = projectsData.find(
     (project) => project.id === params.projectTitle
   );
   return (
