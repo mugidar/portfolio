@@ -9,12 +9,12 @@ const ProjectPage = ({ params }: { params: { projectTitle: string } }) => {
     (project) => project.id === params.projectTitle
   );
   return (
-    <div className="h-[calc(100vh - 30px)]">
-      <div className="flex gap-5 p-20 ">
-        <div className="flex flex-col gap-4 pt-10 w-1/2 ">
+    <div className="h-[calc(100vh - 30px)] ">
+      <div className="flex flex-col lg:flex-row gap-5 lg:p-20 p-10 ">
+        <div className="flex flex-col gap-4 pt-10 ">
           <h1 className=" text-3xl font-bold">{project?.title}</h1>
           <p className="text-xl">{project?.description}</p>
-  
+
           {project.url && (
             <Link
               target="_blank"
@@ -25,13 +25,18 @@ const ProjectPage = ({ params }: { params: { projectTitle: string } }) => {
             </Link>
           )}
         </div>
-        <div className="relative w-[1200px] h-[700px]">
+        <div className="relative lg:w-[1200px] h-[700px]">
           {project.videoName ? (
-            <video src={`/${project.videoName}`} autoPlay={true} controls muted></video>
+            <video
+              src={`/${project.videoName}`}
+              autoPlay={true}
+              controls
+              muted
+            ></video>
           ) : (
             <Image
               className="object-cover"
-              src={project?.imageUrl}
+              src={project?.image}
               fill
               alt={""}
             />

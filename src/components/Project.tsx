@@ -14,7 +14,7 @@ const Project: React.FC<Types> = ({
   title,
   description,
   tags,
-  imageUrl,
+  image,
   linkHref,
 }) => {
   const ref = useRef<HTMLAnchorElement>(null);
@@ -60,7 +60,7 @@ const Project: React.FC<Types> = ({
           <Image
             fill
             className="object-cover scale-125"
-            src={imageUrl}
+            src={image}
             alt={"Project I worked with"}
           />
         </div>
