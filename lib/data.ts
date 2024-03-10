@@ -48,7 +48,7 @@ export const links = [
 ] as const;
 export const uaLinks = [
   {
-    name: "",
+    name: "Вгору",
     hash: "#home",
   },
   {
