@@ -48,7 +48,7 @@ export const links = [
 ] as const;
 export const uaLinks = [
   {
-    name: "Вгору",
+    name: "",
     hash: "#home",
   },
   {
@@ -107,7 +107,7 @@ export const experiencesData = [
   },
 ] as const;
 
-export const projectsData: projectsDataProps[] = [
+export const projectsData = [
   {
     id: "millionaire-game",
     url: "https://millionaire-game-sigma.vercel.app",
