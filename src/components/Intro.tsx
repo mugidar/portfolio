@@ -29,11 +29,11 @@ const Intro = () => {
             animate={{ scale: 1, opacity: 1 }}
           >
             <Image
-              className="translate object-cover translate-y-[15px]   translate-x-[-5px]  scale-[1.7]"
+              className="translate object-cover translate-y-[15px]  translate-x-[-3px]   scale-[1.3]"
               priority={true}
               quality={95}
               fill
-              src={"/Dvizh.png"}
+              src={"/me.png"}
               alt=""
             />
           </motion.div>
