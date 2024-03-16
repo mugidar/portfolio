@@ -2,6 +2,7 @@ import laragigs from "/public/laragigs.png";
 import carshop from "/public/carshop.png";
 import restaurant from "/public/restaurant.png";
 import portfolio from "/public/portfolio.png";
+import ecommerce from "/public/ecommerce.png";
 import millionaire from "/public/millionaire.png";
 import aeScript from "/public/ae_script.png";
 import countLinks from "/public/count-links.png";
@@ -109,6 +110,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    id: "ecommerce-store",
+    url: "https://ecommerce-store-front-one.vercel.app/",
+    url2: "https://ecommerce-store-admin-lemon.vercel.app/",
+    title: "Ecommerce store",
+    description: `Інтернет-магазин. 
+    Має адмін-панель, де можна створювати і контролювати одразу декілька магазинів. 
+    В адмін-панелі можна створювати білборди для категорій, категорії, розміри, кольори, товари, переглядати управляти замовленнями та отримувати API-роути для запитів.
+    Сайт інтернет-магазину пов'язується з адмін панелью. На ньому можна переглядати товари та робити замовлення. Адаптовано під різні пристрої.
+    `,
+    tags: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Prisma",
+      "Tailwind",
+      "Shadcn",
+      "Axios",
+    ],
+    image: ecommerce,
+    videoName: "ecommerce.webm",
+  },
+  {
     id: "millionaire-game",
     url: "https://millionaire-game-sigma.vercel.app",
     title: "Millionaire Game",
@@ -121,7 +144,15 @@ export const projectsData = [
     id: "restaurant",
     title: "Restaurant site",
     description: `Сайт закладу харчування, створений для можливості створення замовлень зі сторони клієнту та управління замовленнями зі сторони менеджеру`,
-    tags: ["JavaScript", "React", "Next.js", "Tailwind", "Prisma", "Axios", "PostgreSQL"],
+    tags: [
+      "JavaScript",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Prisma",
+      "Axios",
+      "PostgreSQL",
+    ],
     image: restaurant,
     videoName: "restaurant.mp4",
   },
