@@ -51,6 +51,16 @@ const Intro = () => {
             😎
           </motion.span>
         </div>
+        <motion.a
+        href="#contact"
+        initial={{ opacity: 0, x: "100%" }}
+        animate={{ opacity: 1, x: "0" }}
+        transition={{ delay: 0.3, duration: 0.4 }}
+        className="bg-black/70 p-3 text-sm  text-white rounded-full mt-5 bottom-10 right-5"
+      >
+        <b>Status:</b> У пошуці компанії мрії, де зможу реалізувати свій
+        потенціал.
+      </motion.a>
         <motion.h1
           initial={{ scale: 0, opacity: 0, y: 100 }}
           animate={{ scale: 1, opacity: 1, y: 0 }}
