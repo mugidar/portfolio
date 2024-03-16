@@ -8,7 +8,7 @@ import useActiveSectionContext from "@/hooks/useActiveSectionContext";
 import useIntersectionObserver from "@/hooks/useSectionInView";
 
 const About = () => {
-  const ref = useIntersectionObserver("#about", 0.5);
+  const ref = useIntersectionObserver("#about", 1);
 
   return (
     <motion.section

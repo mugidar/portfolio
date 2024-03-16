@@ -9,7 +9,7 @@ import useActiveSectionContext from "@/hooks/useActiveSectionContext";
 import { useInView } from "react-intersection-observer";
 import useIntersectionObserver from "@/hooks/useSectionInView";
 const Intro = () => {
-  const ref = useIntersectionObserver("#home", 0.8);
+  const ref = useIntersectionObserver("#home", 0.2);
 
   return (
     <section

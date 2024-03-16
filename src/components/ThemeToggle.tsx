@@ -7,7 +7,7 @@ const ThemeToggle = () => {
 
 	return (
 		<motion.a  href='#contact' initial={{opacity: 0, x: "100%"}} animate={{opacity: 1, x: "0"}} transition={{ delay: .3, duration: .4 }}  className='bg-black/70 p-3 text-white rounded-full fixed bottom-10 right-10'>
-			<b>Status:</b> У пошуці компанії мрії, де я зможу реалізувати свій потенціал. 
+			<b>Status:</b> У пошуці компанії мрії, де зможу реалізувати свій потенціал. 
 		</motion.a>
 	)
 }
